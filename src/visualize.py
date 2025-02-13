@@ -41,6 +41,9 @@ keys, values = zip(*top_10_sorted)
 
 # --- Plotting using matplotlib ---
 import matplotlib.pyplot as plt
+from matplotlib import rc
+
+rc('font', family='UnBatang')
 
 plt.figure(figsize=(10, 6))
 plt.bar(keys, values, color='skyblue')
@@ -50,7 +53,6 @@ plt.title(f"Top 10 {args.key} (sorted low to high)")
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 
-print('got here')
 # Construct an output filename based on the key and input filename.
 # For example, if args.key is "#coronavirus" and the input file is "country.json",
 # the output file will be "plot_coronavirus_country.json.png"
